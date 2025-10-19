@@ -31,11 +31,11 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">{{ company.name }}</h1>
-                <p class="hero-subtitle">Building Excellence Across Africa's Industrial Landscape</p>
-                <p class="hero-description">Leaders in construction, mining, infrastructure, energy and agriculture sectors throughout Africa</p>
+                <p class="hero-subtitle">{{ company.tagline }}</p>
+                <p class="hero-description">Leading industrial solutions in construction, mining, infrastructure, and energy sectors across Africa</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Our Capabilities</a>
-                    <a href="#contact" class="btn btn-secondary">Partner With Us</a>
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -96,30 +96,6 @@
             </div>
             <div class="about-content">
                 <p>{{ company.about }}</p>
-                
-                <div class="strategy-section">
-                    <h3>Our Strategic Approach</h3>
-                    <div class="strategy-grid">
-                        {% for item in company.strategy %}
-                        <div class="strategy-item">
-                            <i class="fas fa-check"></i>
-                            <span>{{ item }}</span>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <div class="client-industries">
-                    <h3>Client Base by Industry</h3>
-                    <div class="industries-grid">
-                        {% for industry in company.client_industries %}
-                        <div class="industry-item">
-                            <i class="fas fa-industry"></i>
-                            <span>{{ industry }}</span>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -135,6 +111,7 @@
                 {% for service in company.services %}
                 <div class="service-card">
                     <h3>{{ service.title }}</h3>
+                    <p class="service-description">{{ service.description }}</p>
                     <div class="capabilities-list">
                         {% for capability in service.capabilities %}
                         <div class="capability-item">
@@ -190,7 +167,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Contact Us</h2>
-                <p>Get in Touch with Our Team</p>
+                <p>Get in touch with our team</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
@@ -206,9 +183,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>Phone</strong>
-                            {% for phone in company.contact.phones %}
-                            <p>{{ phone }}</p>
-                            {% endfor %}
+                            <p>{{ company.contact.phone }}</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -235,7 +210,7 @@
                     <h3>Company Details</h3>
                     <div class="details-list">
                         <div class="detail-item">
-                            <strong>Registration Number:</strong>
+                            <strong>Registration:</strong>
                             <span>{{ company.reg_number }}</span>
                         </div>
                         <div class="detail-item">

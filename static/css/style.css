@@ -552,3 +552,32 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.service-description {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+.service-description {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+.service-description {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+.service-description {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
