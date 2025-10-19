@@ -10,12 +10,12 @@ def landing_page():
         'reg_number': '2018/102808/07',
         'vat_number': '4880295441',
         'csd_number': 'MAAA0591007',
-        
+
         'mission': 'To be the leaders in service delivery and quality in the construction, mining, infrastructure, energy and agriculture sectors throughout Africa whilst upholding our core values.',
         'vision': 'To become the customer\'s preferred choice, valuing quality, people and the environment.',
-        
+
         'about': 'Since our establishment in 2018, ANAMA Holdings has been strategically expanding through valuable partnerships and technical expertise. We deliver turnkey solutions and support to South African based companies across multiple sectors.',
-        
+
         'services': [
             {
                 'title': 'Civil and Construction',
@@ -70,7 +70,7 @@ def landing_page():
                 'description': 'Registered Construction Industry Capabilities'
             }
         ],
-        
+
         'core_values': [
             {'title': 'Safety First', 'description': 'Highest priority on safety following international standards including ISO 45001, 9001, 14001 and OHSAS 18001'},
             {'title': 'Integrity', 'description': 'Transparency, accountability and uncompromised development in all our operations'},
@@ -79,8 +79,13 @@ def landing_page():
             {'title': 'Flexibility', 'description': 'Adaptable to ever-changing environmental and customer requirements'},
             {'title': 'Teamwork', 'description': 'Combining various skills and knowledge for successful project completion'}
         ],
-        
+
         'accreditations': [
+            'B-BBEE LEVEL 1 CONTRIBUTOR',
+            'COIDA COMPLIANCE',
+            'CIDB GRADING: CE • EP • GB • SH • SO'
+        ],
+
         'contact': {
             'address': '7631 Bellpepper Crescent, The Orchards 0182 South Africa',
             'phone': '0707173068',
@@ -88,14 +93,9 @@ def landing_page():
                 {'type': 'Email', 'email': 'info@anama.co.za'},
                 {'type': 'Director', 'email': 'tiyanih@anama.co.za'}
             ]
-        },
-            'B-BBEE LEVEL 1 CONTRIBUTOR',
-            'COIDA COMPLIANCE', 
-            'CIDB GRADING: CE • EP • GB • SH • SO'
-        ],
-        
+        }
     }
     return render_template('index.html', company=company_data)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True)
