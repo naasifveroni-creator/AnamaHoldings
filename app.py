@@ -89,10 +89,10 @@ def landing_page():
         'contact': {
             'address': '7631 Bellpepper Crescent, The Orchards 0182 South Africa',
             'phone': '0707173068',
-            'emails': [
-                {'type': 'Email', 'email': 'info@anama.co.za'},
-                {'type': 'Director', 'email': 'tiyanih@anama.co.za'}
-            ]
+            'emails': {
+                'general': 'info@anama.co.za',
+                'director': 'tiyanih@anama.co.za'
+            }
         }
     }
     return render_template('index.html', company=company_data)
