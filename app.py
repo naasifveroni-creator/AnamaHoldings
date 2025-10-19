@@ -81,17 +81,19 @@ def landing_page():
         ],
         
         'accreditations': [
+        'contact': {
+            'address': '7631 Bellpepper Crescent, The Orchards 0182 South Africa',
+            'phone': '0707173068',
+            'emails': [
+                {'type': 'Email', 'email': 'info@anama.co.za'},
+                {'type': 'Director', 'email': 'tiyanih@anama.co.za'}
+            ]
+        },
             'B-BBEE LEVEL 1 CONTRIBUTOR',
             'COIDA COMPLIANCE', 
             'CIDB GRADING: CE • EP • GB • SH • SO'
         ],
         
-        'contact': {
-            'address': '7631 Bellpepper Crescent, The Orchards 0182 South Africa',
-            'phone': '070 717 3068',
-            'emails': ['info@anama.co.za', 'tiyanih@anama.co.za'],
-            'contacts': ['Mr. Tiyani Hongwane', 'Mr. Sello Motaung']
-        }
     }
     return render_template('index.html', company=company_data)
 
